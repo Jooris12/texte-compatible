@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Générateur de matchs</h1>
+    <div id="resultat"></div>
+ 
+ <script>
+    function genererMatch() {
+  const hommes = ['Emmanuel', 'Prince', 'Nicodeme', 'Junior', 'Nel', 'Rossy', 'Levy', 'Franck'];
+  const femmes = ['Benie', 'Gaella', 'Wendy', 'Anouchka', 'Naicka', 'Marland'];
+
+  const indexHomme = Math.floor(Math.random() * hommes.length);
+  const indexFemme = Math.floor(Math.random() * femmes.length);
+
+  const nomHomme = hommes[indexHomme]
+  const nomFemme = femmes[indexFemme];
+
+  const messagesCompatibilite = ['sont fait pour être ensemble', 'ne sont pas fait pour être ensemble'];
+  const indexMessage = Math.floor(Math.random() * messagesCompatibilite.length);
+  const messageCompatibilite = messagesCompatibilite[indexMessage];
+
+  document.getElementById('resultat').innerHTML=
+ 
+  alert(`${nomHomme} et ${nomFemme} ${messageCompatibilite}`);  
+}
+ </script>
+<button onclick="genererMatch()" style="width: 100px;border-radius: 10px;">Générer un match</button>
+</body>
+</html>
